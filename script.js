@@ -29,10 +29,19 @@ function generatePassword() {
   if (passLength < 8 || passLength > 128) {
     alert('Password must be between 8 and 128 characters!')
   }
-  else{
-    if(confirm('Would you like special characters?')){
-      
+  else {
+    if (confirm('Would you like to use special characters?')) {
+
     };
-  }
+    if (confirm('Would you like to use numbers?')) {
+
+    };
+    if (confirm('Would you like to use lower case letters?')) {
+
+    };
+    if (confirm('Would you like to use upper case letters?')) {
+
+    };
+  };
   return password;
 }
