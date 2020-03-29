@@ -27,23 +27,26 @@ function generatePassword() {
   }
   else {
     if (confirm('Would you like to use special characters?')) {
-      chars.push(spc)
+      chars.push(spc);
     };
     if (confirm('Would you like to use numbers?')) {
-      chars.push(num)
+      chars.push(num);
     };
     if (confirm('Would you like to use lower case letters?')) {
-      chars.push(lower)
+      chars.push(lower);
     };
     if (confirm('Would you like to use upper case letters?')) {
-      chars.push(upper)
+      chars.push(upper);
     };
-    if(chars.length === 0){
-      alert('Password must contain characters')
+    if (chars.length === 0) {
+      alert('Password must contain characters');
     }
-    else{
-
+    else {
+      for (var i=0; i<passLength; i++){
+        var randPass = Math.floor(Math.random()*chars.length);
+        password = chars[randPass];
+      }
     };
   };
-  return password;
+  return randPass;
 }
